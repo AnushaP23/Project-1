@@ -1,0 +1,48 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+<img src="{% static 'error.gif' %}"
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+
+<!--<h1>Error</h1>
+    <h2>{{ message }}</h2>-->
+    <!Doctype html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0>
+       <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
+        <!--<link rel="stylesheet" href={% static 'encyclopedia/animation.css' %}>-->
+        <title>Documents</title>
+    </head>
+    <body>
+        <section class="page_404">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-1 text-center">
+                            <div class="four_zero_four_bg">
+                                <h1 style="font-size:80px">404</h1>
+                                <div style="background-position:center;height:20px">
+                                    <img src="{% static 'encyclopedia/error.gif'%}">
+                                </div>
+                            </div>
+                            <div class="content_box_404">
+                                <h3 class="h2">Looks Like You're Lost</h3>
+                                <p>The page you are looking for is not available</p>
+                                <div>
+                                <a href={% url 'index_page' %}>Go To Home Page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <div style="display:block;text-align:left"><img align="left" src="/static/encyclopedia/search1.png" border="0"><h1>Search</h1><br></div>
+    <ul>
+        {% for entry in recommendations %}
+            <li><a href="{% url 'entry_page' title=entry %}">{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
